@@ -5,7 +5,7 @@
 #include <sys/time.h>
 #include <machbase_sqlcli.h>
 
-#define MACHBASE_PORT_NO		5656
+#define MACHBASE_PORT_NO		34000
 #define ERROR_CHECK_COUNT	100
 
 #define RC_SUCCESS          0
@@ -282,7 +282,8 @@ int appendData(SQLHSTMT aStmt)
     /* binary */
     sParam[10].mBinary.mLength  = SQL_APPEND_BINARY_NULL;
     sRC = SQLAppendDataV2(aStmt, sParam);
-    CHECK_APPEND_RESULT(sRC, gEnv, gCon, aStmt);
+    CHECK_APPEND_RESULT(sRC, gEnv, gCon, aStmt)
+        ;
 
     /* FIXED COLUMN Value */
     sParam[0].mShort    = 2;
@@ -294,7 +295,7 @@ int appendData(SQLHSTMT aStmt)
     CHECK_APPEND_RESULT(sRC, gEnv, gCon, aStmt);
 
     /*  DATETIME : absolute value */
-    sParam[5].mDateTime.mTime      = IFLUX_UINT64_LITERAL(1000000000);
+    sParam[5].mDateTime.mTime      = MACHBASE_UINT64_LITERAL(1000000000);
     sRC = SQLAppendDataV2(aStmt, sParam);
     CHECK_APPEND_RESULT(sRC, gEnv, gCon, aStmt);
 
