@@ -2,7 +2,7 @@
 This sample is for compling the linux based cli sample source with gcc.
 <hr/>
 
-## Makefile
+## Makefile  
 compile file
 
 ##make_data.c  
