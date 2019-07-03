@@ -5,7 +5,7 @@
 #include <sys/time.h>
 #include <machbase_sqlcli.h>
 
-#define MACHBASE_PORT_NO		34000
+#define MACHBASE_PORT_NO		5656
 #define ERROR_CHECK_COUNT	100
 
 #define RC_SUCCESS          0
@@ -142,7 +142,7 @@ int connectDB()
         return RC_FAILURE;
     }
 
-    sprintf(sConnStr,"DSN=127.0.0.1;UID=SYS;PWD=MANAGER;CONNTYPE=1;PORT_NO=%d", MACHBASE_PORT_NO);
+    sprintf(sConnStr,"SERVER=127.0.0.1;UID=SYS;PWD=MANAGER;CONNTYPE=1;PORT_NO=%d", MACHBASE_PORT_NO);
 
     if( SQLDriverConnect( gCon, NULL,
                           (SQLCHAR *)sConnStr,

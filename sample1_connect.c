@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <machbase_sqlcli.h>
 
-#define MACHBASE_PORT_NO		34000
+#define MACHBASE_PORT_NO		5656
 
 #define RC_SUCCESS          0
 #define RC_FAILURE          -1

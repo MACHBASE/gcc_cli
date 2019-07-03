@@ -71,7 +71,7 @@ int connectDB()
         return RC_FAILURE;
     }
 
-    sprintf(sConnStr,"DSN=127.0.0.1;UID=SYS;PWD=MANAGER;CONNTYPE=1;PORT_NO=%d", MACHBASE_PORT_NO);
+    sprintf(sConnStr,"SERVER=127.0.0.1;UID=SYS;PWD=MANAGER;CONNTYPE=1;PORT_NO=%d", MACHBASE_PORT_NO);
 
     if( SQLDriverConnect( gCon, NULL,
                           (SQLCHAR *)sConnStr,
