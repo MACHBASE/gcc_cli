@@ -1,36 +1,36 @@
-# gcc_cli
+#gcc_cli
 This sample is for compling the linux based cli sample source with gcc.
 <hr/>
 
-## Makefile  
+**1. Makefile**  
 compile file
 
-##make_data.c  
+**2. make_data.c**  
 create data.txt file for sample4_append2 case
 
-##make_suffle_data.c  
+**3. make_suffle_data.c**  
 create data files for sample8_multi_session_multi_table case
 
-##sample1_connect.c  
+**4. sample1_connect.c**  
 connect with Machbase server
 
-##sample2_insert.c  
+**5. sample2_insert.c**  
 direct insert and retrieve data from table
 
-##sample3_prepare.c  
+**6. sample3_prepare.c**  
 prepare insert and retrieve data from table
 
-##sample4_append1.c  
+**7. sample4_append1.c**  
 insert data with high speed input protocol.
 
-##sample4_append2.c  
+**8. sample4_append2.c**  
 read data from text file and insert data with high speed input protocol.
 
-##sample5_describe.c  
+**9. sample5_describe.c**  
 get column information with SQLDescribeCol().
 
-##sample6_columns.c  
+**10. sample6_columns.c**  
 get column information with SQLColumns().
 
-##sample8_multi_session_multi_table.c  
-read data files and insert data with multi thread..
+**11. sample8_multi_session_multi_table.c**  
+read data files and insert data with multi thread.
