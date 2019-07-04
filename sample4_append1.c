@@ -282,8 +282,8 @@ int appendData(SQLHSTMT aStmt)
     /* binary */
     sParam[10].mBinary.mLength  = SQL_APPEND_BINARY_NULL;
     sRC = SQLAppendDataV2(aStmt, sParam);
-    CHECK_APPEND_RESULT(sRC, gEnv, gCon, aStmt)
-        ;
+    CHECK_APPEND_RESULT(sRC, gEnv, gCon, aStmt);
+
 
     /* FIXED COLUMN Value */
     sParam[0].mShort    = 2;
