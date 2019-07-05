@@ -1,5 +1,18 @@
 # gcc_cli
-This sample is for compling the linux based cli sample source with gcc.
+This sample is for compiling the linux based cli sample source with gcc.
+
+<hr/>
+
+How to use
+<hr/>
+1. insert command "git clone https://github.com/KoreaLSH/gcc_cli.git" to download files.
+  
+2. insert command "make" to compile *.c files.
+
+3. Try to execute sample files.
+
+
+Instruction
 <hr/>
 
 **1. Makefile**  
