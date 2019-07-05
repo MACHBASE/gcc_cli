@@ -3,7 +3,7 @@ This sample is for compiling the linux based cli sample source with gcc.
 
 <hr/>
 
-How to use
+# How to use
 <hr/>
 1. insert command "git clone https://github.com/KoreaLSH/gcc_cli.git" to download files.
   
@@ -12,7 +12,7 @@ How to use
 3. Try to execute sample files.
 
 
-Instruction
+#Instruction
 <hr/>
 
 **1. Makefile**  
