@@ -142,7 +142,7 @@ int connectDB()
         return RC_FAILURE;
     }
 
-    sprintf(sConnStr,"DSN=127.0.0.1;UID=SYS;PWD=MANAGER;CONNTYPE=1;PORT_NO=%d", MACHBASE_PORT_NO);
+    sprintf(sConnStr,"SERVER=127.0.0.1;UID=SYS;PWD=MANAGER;CONNTYPE=1;PORT_NO=%d", MACHBASE_PORT_NO);
 
     if( SQLDriverConnect( gCon, NULL,
                           (SQLCHAR *)sConnStr,
@@ -284,6 +284,7 @@ int appendData(SQLHSTMT aStmt)
     sRC = SQLAppendDataV2(aStmt, sParam);
     CHECK_APPEND_RESULT(sRC, gEnv, gCon, aStmt);
 
+
     /* FIXED COLUMN Value */
     sParam[0].mShort    = 2;
     sParam[1].mInteger  = 4;
@@ -294,7 +295,7 @@ int appendData(SQLHSTMT aStmt)
     CHECK_APPEND_RESULT(sRC, gEnv, gCon, aStmt);
 
     /*  DATETIME : absolute value */
-    sParam[5].mDateTime.mTime      = IFLUX_UINT64_LITERAL(1000000000);
+    sParam[5].mDateTime.mTime      = MACHBASE_UINT64_LITERAL(1000000000);
     sRC = SQLAppendDataV2(aStmt, sParam);
     CHECK_APPEND_RESULT(sRC, gEnv, gCon, aStmt);
 

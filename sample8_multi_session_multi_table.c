@@ -98,7 +98,7 @@ int connectDB(SQLHENV *aEnv, SQLHDBC *aCon)
         return RC_FAILURE;
     }
 
-    sprintf(sConnStr,"DSN=127.0.0.1;UID=SYS;PWD=MANAGER;CONNTYPE=1;PORT_NO=%d", MACHBASE_PORT_NO);
+    sprintf(sConnStr,"SERVER=127.0.0.1;UID=SYS;PWD=MANAGER;CONNTYPE=1;PORT_NO=%d", MACHBASE_PORT_NO);
 
     if( SQLDriverConnect( *aCon, NULL,
                           (SQLCHAR *)sConnStr,
